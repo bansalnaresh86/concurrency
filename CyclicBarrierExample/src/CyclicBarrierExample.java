@@ -26,6 +26,8 @@ public class CyclicBarrierExample {
                 System.out.println(Thread.currentThread().getName() + " is waiting on barrier");
                 barrier.await();
                 System.out.println(Thread.currentThread().getName() + " has crossed the barrier");
+                barrier.await();
+                System.out.println(Thread.currentThread().getName() + " has crossed the barrier - 8988");
             } catch (InterruptedException ex) {
                 Logger.getLogger(CyclicBarrierExample.class.getName()).log(Level.SEVERE, null, ex);
             } catch (BrokenBarrierException ex) {
